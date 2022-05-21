@@ -1,0 +1,134 @@
+:root {
+    --blue: #8f9bff;
+    --grey: #a0a0b1;
+    --skyblue: #e8eaf6;
+}
+
+/** Template **/
+.Template {
+    padding: 20px;
+    max-height: 100vh;
+}
+
+.title {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+
+    padding-bottom: 20px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--blue);
+}
+
+/** To do List **/
+.TodoList {
+    width: 90vw;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 20px;
+}
+
+/** To do Insert **/
+.background {
+    position: fixed;
+    z-index: 980;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--grey);
+    opacity: 0.8;
+}
+
+form {
+    position: fixed;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    z-index: 990;
+    width: 300px;
+    height: 150px;
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px 1px var(--grey);
+    background-color: var(--skyblue);
+    margin-left: 5%;
+    top: 40%;
+}
+
+form > input {
+    background: none;
+    border: none;
+    outline: none;
+    border-bottom: 1px solid var(--blue);
+    padding: 0.5rem;
+    font-size: 1.1rem;
+    line-height: 1.5;
+}
+
+form > button {
+    padding-top: 1rem;
+    padding-bottom: 1px;
+    background: none;
+    border: none;
+    outline: none;
+    color: var(--blue);
+    font-size: 1.6rem;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.1s background ease-in;
+}
+
+.rewrite > svg {
+    padding-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    padding-bottom: 1px;
+    color: var(--blue);
+    font-size: 1.6rem;    
+}
+
+/** To do Item **/
+.TodoItem {
+    margin-left: auto;
+    margin-right: auto;
+
+    border-radius: 5px;
+    box-shadow: 1px 2px 5px 1px var(--grey);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+}
+
+.TodoItem + .TodoItem {
+    margin-top: 1rem;
+}
+
+.content {
+    cursor: pointer;
+    display: flex;
+    flex: 1;
+    align-items: center;
+}
+
+.content svg {
+    font-size: 1.5rem;
+    color: var(--blue);
+}
+
+.content .text {
+    margin-left: 0.5rem;
+    flex: 1;
+}
+
+.content.checked .text {
+    text-decoration: line-through;
+    cursor: pointer;
+    opacity: 0.6;
+}
